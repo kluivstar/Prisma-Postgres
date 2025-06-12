@@ -7,4 +7,4 @@ router.get('/', categoryController.getCategories)
 router.put('/:id', categoryController.updateCategory)
 router.delete('/:id', categoryController.deleteCategory)
 
-module.exportss = router
+module.exports = router
