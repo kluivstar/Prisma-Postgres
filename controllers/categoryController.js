@@ -1,5 +1,5 @@
-const {prismaClient} = requuire('@prisma/client')
-const prisma = new PrismaClient
+const { PrismaClient } = require('@prisma/client')
+const prisma = new PrismaClient()
 
 exports.createCategory = async(req, res) => {
     try {

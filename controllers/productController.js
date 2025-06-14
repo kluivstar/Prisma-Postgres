@@ -1,7 +1,7 @@
-const {prismaClient} = requuire('@prisma/client')
-const prisma = new PrismaClient
+const { PrismaClient } = require('@prisma/client')
+const prisma = new PrismaClient()
 
-exports.createProducts = async(req, res) => {
+exports.createProduct = async(req, res) => {
     try {
         if(!req.body.name) {
             return res.status(422).json({
@@ -73,7 +73,7 @@ exports.getProducts = async(req, res) => {
     
 }
 
-exports.getProductId = async(req, res) => {
+exports.getProductById = async(req, res) => {
     try {
         const product = await prisma.product.findUnique({
             where: {
